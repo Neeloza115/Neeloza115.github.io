@@ -8,85 +8,94 @@
   <link rel="icon" type="image/png" href="https://yt3.ggpht.com/0YAMYVug4nTfnI6_V0WnHMnRTFKufffvKrPlQMd5o457U3IQG0XhvFCtvxcyITFwgGtY4uy5hg=s108-c-k-c0x00ffffff-no-rj"/>
 
   <!--Style embedded-->
-  <style>
-    body {
-      background: rgb(2,0,36);
-      background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(33,150,243,1) 100%);
-      margin: 0;
-      text-align: center;
-    }
+<style>
+  body {
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(33,150,243,1) 100%);
+    margin: 0;
+    text-align: center;
+  }
 
-    h1 {
-      text-align: center;
-    }
+  .section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
-    h2 {
-      background-color: #2E8B57;
-      color: aliceblue;
-      padding: 10px;
-      display: inline-block;
-      text-align: center;
-    }
+  .section h1 {
+    text-align: center;
+    font-size: 6rem;
+    background: #fff;
+    padding: 20px;
+    margin: 15px;
+    z-index: 1;
+  }
 
-    video {
-      object-fit: cover;
-      width: 100vw;
-      height: 50px;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
-    .viewport-header {
-      position: relative;
-      height: 100vh;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  h2 {
+    background-color: #2E8B57;
+    color: aliceblue;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+  }
 
-    .icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 100%;
-      object-fit: cover;
-      position: left;
-      position: absolute;
-      left: 20px;
-    }
+  .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+    position: left;
+    position: absolute;
+    left: 20px;
+  }
     
-    .grid-container {
-      display: grid;
-      grid-template-columns: 487.5px 487.5px 487.5px;
-      padding: 10px;
-    }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 487.5px 487.5px 487.5px;
+    padding: 10px;
+  }
 
-    .grid-item {
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 2px solid rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      margin: 10px;
-      font-size: 30px;
-      text-align: center;
-      align-items: center;
-          box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
-    }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+       box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  }
 
-    .grid-item:active {
-      transform: scale(0.98); /* Scaling button to 0.98 to its original size */
-      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);/* Lowering the shadow */
-      border: 2px solid rgba(255, 0, 0, 0.8); /*changing the border colour*/
+  .grid-item:active {
+    transform: scale(0.98); /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);/* Lowering the shadow */
+    border: 2px solid rgba(255, 0, 0, 0.8); /*changing the border colour*/
 
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-<header>
-<h1>Neel's Website
+<div class="section">
+  <h1>Neel's Website
   <img src="https://yt3.ggpht.com/0YAMYVug4nTfnI6_V0WnHMnRTFKufffvKrPlQMd5o457U3IQG0XhvFCtvxcyITFwgGtY4uy5hg=s108-c-k-c0x00ffffff-no-rj" alt="Neel" class="icon">
 </h1>
-</header>
+</div>
+
+<div class="video-container">
+  <video src="banner.mp4" autoplay loop playsinline muted></video>
+</div>
+
 
  <li><ul>Student</ul></li>
 
@@ -143,6 +152,5 @@
     const audio = new Audio();
     audio.src = "https://www.fesliyanstudios.com/play-mp3/387";
   </script>
-<video src="banner.mp4" autoplay loop playsinline muted></video>
 </body>
 </html>
