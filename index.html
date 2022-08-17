@@ -22,11 +22,20 @@
 
     #myVideo {
       object-fit: cover;
-  width: 100vw;
-  height: 25vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .viewport-header {
+      position: relative;
+      height: 100vh;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     h2 {
@@ -76,9 +85,11 @@
 <video autoplay muted loop id="myVideo">
     <source src="banner.mp4" type="video/mp4">
 </video>
+<header class="viewport-header">
 <h1>Neel's Website
   <img src="https://yt3.ggpht.com/0YAMYVug4nTfnI6_V0WnHMnRTFKufffvKrPlQMd5o457U3IQG0XhvFCtvxcyITFwgGtY4uy5hg=s108-c-k-c0x00ffffff-no-rj" alt="Neel" class="icon">
 </h1>
+</header>
 
  <li><ul>Student</ul></li>
 
