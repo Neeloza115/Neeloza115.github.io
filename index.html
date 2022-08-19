@@ -6,11 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neel's Website</title>
   <link rel="icon" type="image/png" href="https://yt3.ggpht.com/0YAMYVug4nTfnI6_V0WnHMnRTFKufffvKrPlQMd5o457U3IQG0XhvFCtvxcyITFwgGtY4uy5hg=s108-c-k-c0x00ffffff-no-rj"/>
-
-  <!--Style embedded-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  
+<!--Style embedded-->
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     text-align: center;
+    align-items: center;
+    background-color: #202024;
   }
 
   .viewport-header {
@@ -25,20 +34,23 @@
 
   video {
     object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
+    width: 100%;
+    height: 65vh;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
   }
 
-  h2 {
-    background-color: #2E8B57;
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
     color: aliceblue;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
+    font-size: 5em;
+  }
+
+  h2 {
+    font-family: 'Roboto Mono', monospace;
+    color: aliceblue;
   }
 
   .icon {
@@ -54,7 +66,10 @@
   .grid-container {
     display: grid;
     grid-template-columns: 487.5px 487.5px 487.5px;
-    padding: 10px;
+    background-color: #202024;
+    align-items: center;
+    justify-content: center;
+    margin-top: 170px;
   }
 
   .grid-item {
@@ -65,49 +80,47 @@
     font-size: 30px;
     text-align: center;
     align-items: center;
-       box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
   }
 
   .grid-item:active {
-    transform: scale(0.98); /* Scaling button to 0.98 to its original size */
+    transform: scale(0.98); /*Scaling button to 0.98 to its original size */
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);/* Lowering the shadow */
     border: 2px solid rgba(255, 0, 0, 0.8); /*changing the border colour*/
   }
 
   #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    background: transparent;
+    border: none;
+  }
 
-#myBtn:hover {
-  background-color: #555;
-}
+  #contactbtn {
+    position: absolute;
+    vertic
+  }
 </style>
 </head>
 <body>
-<video src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov" autoplay loop playsinline muted></video>
-<div class="viewport-header">
-  <h1>Neel's Website
-  <img src="https://yt3.ggpht.com/0YAMYVug4nTfnI6_V0WnHMnRTFKufffvKrPlQMd5o457U3IQG0XhvFCtvxcyITFwgGtY4uy5hg=s108-c-k-c0x00ffffff-no-rj" alt="Neel" class="icon">
-  </h1>
-</div>
+<header>
+  <video src="banner.mp4" autoplay loop playsinline muted></video>
+  <div class="viewport-header">
+    <h1>Neel's Website
+    <img src="https://yt3.ggpht.com/0YAMYVug4nTfnI6_V0WnHMnRTFKufffvKrPlQMd5o457U3IQG0XhvFCtvxcyITFwgGtY4uy5hg=s108-c-k-c0x00ffffff-no-rj" alt="Neel" class="icon">
+    </h1>
+  </div>
+ </header>
  
- <h2>Welcome to my website! Here you can find links and resources for some subjects that Neel is taking and some other stuff</h2>
+<h2>Welcome to my website! Here you can find links and resources for some subjects that Neel is taking and some other stuff</h2><br>
 
- <button onclick="topFunction()" onclick="audio.play();" id="myBtn" title="Go to top">Top</button>
+<a href="#Content"><img src="Down arrow.png" width="50" height="50"></a>
 
- <div class="grid-container" onclick="audio.play();">
+<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="Up arrow.png" width="50" height="50"></button>
+
+<div class="grid-container" onclick="audio.play();" id="Content">
   <div class="grid-item">
     <figure><a href="https://drive.google.com/drive/my-drive" target="_blank" class="Link"><img src="https://www.pngall.com/wp-content/uploads/9/Google-Drive-Logo-Transparent.png" alt="Google Drive" width="275" height="200"></a><br>
     <figcaption>Google Drive</figcaption>
@@ -150,34 +163,40 @@
   </div>
   </div class="grid-item">
   <a href="http://mis.kp.ac.rw/admin/admin_panel/kp_lms/files/digital/SelectiveBooks/Physics/Physics%20for%20the%20IB%20Diploma%20Study%20and%20Revision%20Guide%20(gnv64).pdf"></a>
-  </div>
+</div>
 
-  <!--Javascript for button audio-->
-  <script type="text/javascript">
-    const audio = new Audio();
-    audio.src = "https://www.fesliyanstudios.com/play-mp3/387";
-  </script>
+<!--Javascript for button audio-->
+<script type="text/javascript">
+  const audio = new Audio();
+  audio.src = "https://www.fesliyanstudios.com/play-mp3/387";
+</script>
 
 <script>
   //Get the button
   var mybutton = document.getElementById("myBtn");
-  
+   
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function() {scrollFunction()};
-  
+    
   function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       mybutton.style.display = "block";
     } else {
       mybutton.style.display = "none";
     }
-  }
-  
+   }
+    
   // When the user clicks on the button, scroll to the top of the document
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-  </script>
+</script>
+
+<footer>
+<h2>Contact me</h2>
+<a href="https://www.instagram.com/neel.oza758/?hl=en" target="_blank" id="contactbtn"><img src="Instagram.png" width="100" height="56"></a>
+<a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" id="contactbtn"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1200px-Gmail_icon_%282020%29.svg.png" width="70" height="40"></a>
+</footer>
 </body>
 </html>
