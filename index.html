@@ -24,7 +24,7 @@
 
   .viewport-header {
     position: relative;
-    height: 100px;
+    height: 9.25%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@
   video {
     object-fit: cover;
     width: 100%;
-    height: 65vh;
+    height: 90vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -45,31 +45,41 @@
   h1 {
     font-family: 'Source Sans Pro', sans-serif;
     color: aliceblue;
-    font-size: 5em;
+    font-size: 10vh;
   }
 
   h2 {
     font-family: 'Roboto Mono', monospace;
     color: aliceblue;
+    font-size: 4vh;
+  }
+
+  .list {
+    font-family: 'Roboto Mono', monospace;
+    color: aliceblue;
+    font-size: 1em;
+    display: table;
+    text-align: justify;
+    margin: 0 auto;
   }
 
   .icon {
-    width: 60px;
-    height: 60px;
+    width: 10vh;
+    height: 10vh;
     border-radius: 100%;
     object-fit: cover;
     position: left;
     position: absolute;
-    left: 20px;
+    left: 4%;
   }
     
   .grid-container {
     display: grid;
-    grid-template-columns: 487.5px 487.5px 487.5px;
+    grid-template-columns: repeat(auto-fit, minmax(731.25px, 1fr));
     background-color: #202024;
     align-items: center;
     justify-content: center;
-    margin-top: 170px;
+    margin-top: 0px;
   }
 
   .grid-item {
@@ -84,6 +94,32 @@
   }
 
   .grid-item:active {
+    transform: scale(0.98); /*Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);/* Lowering the shadow */
+    border: 2px solid rgba(255, 0, 0, 0.8); /*changing the border colour*/
+  }
+
+  .grid-container-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(76%, 1fr));
+    background-color: #202024;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+  }
+
+  .grid-item-1 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  }
+
+  .grid-item-1:active {
     transform: scale(0.98); /*Scaling button to 0.98 to its original size */
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);/* Lowering the shadow */
     border: 2px solid rgba(255, 0, 0, 0.8); /*changing the border colour*/
@@ -110,6 +146,7 @@
     transform: scale(0.90); /*Scaling button to 0.90 to its original size */
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);/* Lowering the shadow */
   }
+
 </style>
 </head>
 <body>
@@ -122,31 +159,31 @@
   </div>
  </header>
  
-<h2>Welcome to my website! Here you can find links and resources for some subjects that Neel is taking and some other stuff</h2><br>
+<h2>Welcome to my website! My name is Neel and I am 17 years old in the IB Program. I was born and raised in Canada. I am extremely passionate about math and science and its applications and as a result, I was naturally drawn to computer science.</h2><br>
+<h2>This website showcases some of my STEM related projects and extracurricular achievements</h2><br>
 
 <a href="#Content"><img src="Down arrow.png" width="50" height="50"></a>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="Up arrow.png" width="50" height="50"></button>
+<picture></picture>
+
+<div class="grid-container-1" onclick="audio.play();" id="Content">
+  <div class="grid-item-1">
+    <figure><a href="https://docs.google.com/document/d/15XON9xDIZo2wpH78rWcvhq67trNzKeDBl7ghdhevzRw/edit" target="_blank" class="Link"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Docs.max-1100x1100.png" alt="Extracurriculars" width="200" height="200"></a>
+    <figcaption>Extracurriculars</figcaption>
+  </figure>
+  </div>
+</div>
 
 <div class="grid-container" onclick="audio.play();" id="Content">
   <div class="grid-item">
-    <figure><a href="https://drive.google.com/drive/my-drive" target="_blank" class="Link"><img src="https://www.pngall.com/wp-content/uploads/9/Google-Drive-Logo-Transparent.png" alt="Google Drive" width="275" height="200"></a><br>
-    <figcaption>Google Drive</figcaption>
+    <figure><a href="https://medium.com/me/stories/public" target="_blank" class="Link"><img src="Medium.jpg" alt="Medium" width="300" height="200"></a><br>
+    <figcaption>Medium Articles</figcaption>
     </figure>
   </div>
   <div class="grid-item">
-      <figure><a href="https://ib.bioninja.com.au/" target="_blank" class="Link"><img src="bioninja_med.png" alt="BioNinja" width="150" height="200"></a><br>
-    <figcaption>BioNinja</figcaption>
-    </figure>
-  </div>
-  <div class="grid-item">
-    <figure><a href="https://ibphysics.org/" target="_blank" class="Link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/P_physics.svg/1200px-P_physics.svg.png" alt="Physics Notes" width="200" height="200"></a><br>
-    <figcaption>IB Physics Notes</figcaption>
-    </figure>
-  </div>
-  <div class="grid-item">
-    <figure><a href="https://docs.google.com/document/d/1hOPYK9PxFkrD_qQWzM8vsNT18BVydZuvyd-txjf_6rk/edit#" target="_blank" class="Link"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/University_of_Waterloo_seal.svg/1200px-University_of_Waterloo_seal.svg.png" alt="Waterloo AIF" width="200" height="200"></a><br>
-    <figcaption>AIF Template</figcaption>
+      <figure><a href="https://docs.google.com/document/d/1CAgumQI_iF-vnZX7c5YOpo5WXdqePhi-0hHhQ5zY7vo/edit#" target="_blank" class="Link"><img src="Biology.png" alt="Biology IA" width="200" height="200"></a><br>
+      <figcaption>Biology IA</figcaption>
     </figure>
   </div>
   <div class="grid-item">
@@ -154,23 +191,12 @@
     <figcaption>Math with Neel</figcaption>
     </figure>
   </div>
+  
   <div class="grid-item">
-    <figure><a href="https://www.cemc.uwaterloo.ca/contests/past_contests.html#euclid" target="_blank" class="Link"><img src="CSMC.png" alt="Medium Articles" width="200" height="200"></a><br>
-    <figcaption>CSMC</figcaption>
+    <figure><a href="https://docs.google.com/document/d/1DLULZzWDrR1QLRfHrQQp9ZCGrc0ncug6g21ZvPZMr6I/edit#heading=h.xrkzqmcezzkg" target="_blank" class="Link"><img src="Math.png" alt="Mathematics IA" width="200" height="200"></a><br>
+    <figcaption>Mathematics IA</figcaption>
     </figure>
   </div>
-  <div class="grid-item">
-    <figure><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="Link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1200px-Gmail_icon_%282020%29.svg.png" alt="Gmail" width="267" height="200"></a><br>
-    <figcaption>Gmail</figcaption>
-    </figure>
-  </div>
-  <div class="grid-item">
-    <figure><a href="https://hdsb.elearningontario.ca/d2l/home" target="_blank" class="Link"><img src="BrightSpace.png" alt="BrightSpace" width="200" height="200"></a><br>
-    <figcaption>BrightSpace</figcaption>
-    </figure>
-  </div>
-  </div class="grid-item">
-  <a href="http://mis.kp.ac.rw/admin/admin_panel/kp_lms/files/digital/SelectiveBooks/Physics/Physics%20for%20the%20IB%20Diploma%20Study%20and%20Revision%20Guide%20(gnv64).pdf"></a>
 </div>
 
 <footer>
@@ -202,7 +228,6 @@
     
   // When the user clicks on the button, scroll to the top of the document
   function topFunction() {
-    document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
 </script>
