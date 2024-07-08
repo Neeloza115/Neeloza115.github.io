@@ -1,227 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neel's Website</title>
-  <link rel="icon" type="image/png" href="https://yt3.ggpht.com/0YAMYVug4nTfnI6_V0WnHMnRTFKufffvKrPlQMd5o457U3IQG0XhvFCtvxcyITFwgGtY4uy5hg=s108-c-k-c0x00ffffff-no-rj"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-  
-<!--Style embedded-->
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    text-align: center;
-    align-items: center;
-    background-color: #202024;
-  }
-
-  .viewport-header {
-    position: relative;
-    height: 9.25%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-  }
-
-  video {
-    object-fit: cover;
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: aliceblue;
-    font-size: 10vh;
-  }
-
-  h2 {
-    font-family: 'Roboto Mono', monospace;
-    color: aliceblue;
-    font-size: 4vh;
-  }
-
-  .list {
-    font-family: 'Roboto Mono', monospace;
-    color: aliceblue;
-    font-size: 1em;
-    display: table;
-    text-align: justify;
-    margin: 0 auto;
-  }
-
-  .icon {
-    width: 10vh;
-    height: 10vh;
-    border-radius: 100%;
-    object-fit: cover;
-    position: left;
-    position: absolute;
-    left: 4%;
-  }
-    
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(731.25px, 1fr));
-    background-color: #202024;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0px;
-  }
-
-  .grid-container-1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(76%, 1fr));
-    background-color: #202024;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-  }
-
-  .grid-item-1 {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    margin: 10px;
-    font-size: 30px;
-    text-align: center;
-    align-items: center;
-    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
-  }
-
-  .grid-item-1:active {
-    transform: scale(0.98); /*Scaling button to 0.98 to its original size */
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);/* Lowering the shadow */
-    border: 2px solid rgba(255, 0, 0, 0.8); /*changing the border colour*/
-  }
-
-  #myBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    background: transparent;
-    border: none;
-  }
-
-  .contactimg{
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 30px;
-    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
-  }
-
-  .contactimg:active {
-    transform: scale(0.90); /*Scaling button to 0.90 to its original size */
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);/* Lowering the shadow */
-  }
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neel's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<header>
-  <video src="banner.mp4" autoplay loop playsinline muted></video>
-  <div class="viewport-header">
-    <h1>Neel's Website
-    <img src="https://yt3.ggpht.com/0YAMYVug4nTfnI6_V0WnHMnRTFKufffvKrPlQMd5o457U3IQG0XhvFCtvxcyITFwgGtY4uy5hg=s108-c-k-c0x00ffffff-no-rj" alt="Neel" class="icon">
-    </h1>
-  </div>
- </header>
- 
-<h2>Welcome to my website! My name is Neel and I am 17 years old in the IB Program. I was born and raised in Canada. I am extremely passionate about math and science and its applications and as a result, I was naturally drawn to computer science.</h2><br>
-<h2>This website showcases some of my STEM related projects and extracurricular achievements</h2><br>
+    <div class="topnav" id="myTopnav">
+        <nav style=" flex: 1; display: flex;">
+            <img class="userPic" src="images/profile_image.jpg" alt="profile picture">
+            <div class="userDetails">
+                <h1>Neel</h1>
+                <h1>Oza</h1>
+                <span>Full Stack Developer</span>
+            </div>
+            <div class="home">
+                <a href="#school" class="home"><ion-icon name="school-outline"></ion-icon></a>
+            </div>
+            <div class="project">
+                <a href="#projects" class="project"><ion-icon name="folder-open-outline"></ion-icon></a>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><ion-icon name="mail-outline"></ion-icon></button>
+                <div class="dropdown-content">
+                    <a href="mailto:neeloza115@gmail.com" target="_blank"><i class="fa fa-envelope" style="font-size:24px"></i>&ensp;Email</a>
+                    <a href="https://www.instagram.com/neel.oza758/?hl=en" target="_blank"><i class="fa fa-instagram" style="font-size:24px"></i>&ensp;Instagram</a>
+                    <a href="https://www.linkedin.com/in/neel-oza-14b20b289" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i>&ensp;LinkedIn</a>
+                </div>
+            </div>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsivefunction(); moveElementsDown();"><i class="fa fa-bars"></i></a>
+        </nav>
+    </div>  
 
-<a href="#Content"><img src="Down arrow.png" width="50" height="50"></a>
+<div class="content">
+    <div class="about">
+        <h1 style="color: gray; padding-left:10px;">About me</h1>
+        <p style="margin-left: 20px; margin-right: 20px; padding-bottom: 5px;">Welcome to my corner of the web! I'm Neel Oza, a passionate Full Stack Web Developer who loves crafting innovative websites.
+            Below you will be able to find my projects, each designed to push boundaries and exceed expectations. You will also find 
+            information about my skills.
+        </p>
+    </div>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="Up arrow.png" width="50" height="50"></button>
-<picture></picture>
+   
+    <h1 style="color: #00a7db; margin-left: 20px;"><ion-icon name="accessibility-outline" style="z-index: 0;"></ion-icon>Skills</h1>
+    <section class="school" style="padding-top: 5px; padding-bottom: 5px;">
+        <ul>
+            <li>Programming Languages: Python, C, Javascript</li>
+            <li>Web Technologies: HTML, CSS, Node.js, Django, APIs</li>
+            <li>Tools and Frameworks: Git, Heroku</li>
+            <li>Operating Systems: Windows, Linux</li>
+            <li>Other Skills: Willingness to keep learning, Time Management Skills, 
+                Information gathering skills, Interpersonal skills, Participation in projects, 
+                Leadership and management, Customer Service Skills</li>
+        </ul>
+    </section>
 
-<div class="grid-container-1" onclick="audio.play();" id="Content">
-  <div class="grid-item-1">
-    <figure><a href="https://docs.google.com/document/d/15XON9xDIZo2wpH78rWcvhq67trNzKeDBl7ghdhevzRw/edit" target="_blank" class="Link"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Docs.max-1100x1100.png" alt="Extracurriculars" width="200" height="200"></a>
-    <figcaption>Extracurriculars</figcaption>
-  </figure>
-  </div>
-  <div class="grid-item-1">
-    <figure><a href="https://neeloza123.medium.com/" target="_blank" class="Link"><img src="Medium.jpg" alt="Medium" width="300" height="200"></a><br>
-    <figcaption>Medium Articles</figcaption>
-    </figure>
-  </div>
-  <div class="grid-item-1">
-      <figure><a href="https://docs.google.com/document/d/1CAgumQI_iF-vnZX7c5YOpo5WXdqePhi-0hHhQ5zY7vo/edit#" target="_blank" class="Link"><img src="Biology.png" alt="Biology IA" width="200" height="200"></a><br>
-      <figcaption>Biology IA</figcaption>
-    </figure>
-  </div>
-  <div class="grid-item-1">
-    <figure><a href="https://www.youtube.com/channel/UC-zWnl0VveWcCpaObtCfoeg" target="_blank" class="Link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png" alt="Math with Neel" width="275" height="200"></a><br>
-    <figcaption>Math with Neel</figcaption>
-    </figure>
-  </div>
-  
-  <div class="grid-item-1">
-    <figure><a href="https://docs.google.com/document/d/1DLULZzWDrR1QLRfHrQQp9ZCGrc0ncug6g21ZvPZMr6I/edit#heading=h.xrkzqmcezzkg" target="_blank" class="Link"><img src="https://t3.ftcdn.net/jpg/02/28/93/86/360_F_228938670_6fqDkXHDva9Up2yu7pQG9iecxqeJGZgC.jpg"Mathematics IA" width="230" height="200"></a><br>
-    <figcaption>Mathematics IA</figcaption>
-    </figure>
-  </div>
+    <section id="school">
+        <h1 style="color: gray; padding-bottom: 0px; color: #00C1EA; margin-left: 20px;"><ion-icon name="school-outline" style="padding-right: 5px; color: #00a7db"></ion-icon>Education</h1>
+        <div class="grid-container" style="background-color: #00C1EA">
+            <div class="schooldates">2023<br>Present</div>
+            <div class="schoolinfo"><ion-icon name="business-outline"></ion-icon>&ensp;McMaster University</div>
+            <div class="schoolinfo2"><ion-icon name="person-circle-outline"></ion-icon>&ensp;Computer Science</div>
+            <div class="schoolinfo3">I am pursuing a Bachelor of Applied Science in Computer Science at McMaster University, 
+            located in Hamilton, Ontario. This program has provided me with a strong foundation in computing through a diverse 
+            curriculum, covering algorithms, software development, AI, machine learning, and cybersecurity.</div>
+            </div>
+        </div>
 
-  <div class="grid-item-1">
-    <figure><a href="https://docs.google.com/document/d/1DLULZzWDrR1QLRfHrQQp9ZCGrc0ncug6g21ZvPZMr6I/edit#heading=h.xrkzqmcezzkg" target="_blank" class="Link"><img src="https://www.logolynx.com/images/logolynx/95/9581b1307a4b41addbfaacf4572a7233.jpeg" alt="Mathematics IA" width="200" height="200"></a><br>
-    <figcaption>Physics IA</figcaption>
-    </figure>
-  </div>
+        <div class="grid-container" style="background-color: #00C1EA;">
+            <div class="schooldates" style="background-color: #00C1EA;">2019<br>2023</div>
+            <div class="schoolinfo" style="background-color: #00C1EA;"><ion-icon name="business-outline"></ion-icon>&ensp;Burlington Central High School</div>
+            <div class="schoolinfo2" style="background-color: #00C1EA;"><ion-icon name="person-circle-outline"></ion-icon>&ensp;International Bacclaureate</div>
+            <div class="schoolinfo3" style="background-color: #00C1EA;">I completed the International Baccalaureate (IB) program at Burlington Central High School 
+                in Burlington, Ontario, where I gained a rigorous and holistic education that prepared me for higher studies and 
+                personal growth.</div>
+            </div>
+        </div>
+    </section>
 
-  <div class="grid-item-1">
-    <figure><a href="https://docs.google.com/document/d/1ksdvKN8gdNp1_MpT4YU_S86yujSFApiaL0HvFM5OmVM/edit?usp=sharing" target="_blank" class="Link"><img src="https://t3.ftcdn.net/jpg/02/28/93/86/360_F_228938670_6fqDkXHDva9Up2yu7pQG9iecxqeJGZgC.jpg" alt="Mathematics IA" width="200" height="200"></a><br>
-    <figcaption>Mathematics EE</figcaption>
-    </figure>
-  </div>
+    <section id="projects">
+        <h1 style="color: #94D401; padding-bottom: 0px; margin-left: 20px;"><ion-icon name="code-slash-outline"></ion-icon>Projects Section</h1>
+        <div class="container">
+            <div class="projectlist">
+                <div class="project-card">
+                    <a href="https://neelsweatherapp-b698fb795223.herokuapp.com" target="_blank"><h2>A Weather App</h2></a>
+                    <p class="short-description">A web development project.</p>
+                     <a href="https://neelsweatherapp-b698fb795223.herokuapp.com" target="_blank"><img src="/images/Weatherapp.png"/></a>
+                    <button class="read-more-btn" onclick="myfunction()">Read More</button>
+                    <div class="long-description" id="myDropdown">
+                        <p>It involves creating a responsive weatherapp using modern web technologies such as HTML, CSS, and JavaScript and DJango. 
+                            The project also incorporates advanced features like dynamic content loading, and API integrations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="school">
+        <h1 style="color: #61b100; padding-bottom: 0px;"><ion-icon name="school-outline" style="padding-right: 5px; margin-left: 20px;"></ion-icon>Previous Employment</h1>
+        <div class="grid-container" style="background-color: #61b100;">
+            <div class="schooldates">April 2023<br>August 2023</div>
+            <div class="schoolinfo"><ion-icon name="business-outline"></ion-icon>&ensp;Dollarama</div>
+            <div class="schoolinfo2"><ion-icon name="person-circle-outline"></ion-icon>&ensp;Cashier</div>
+            <div class="schoolinfo3"> I was responsible for processing customer transactions at the point of sale, 
+                handling cash, credit, and debit card payments accurately. I provided excellent customer service, 
+                managde transactions efficiently, and ensured the sales area remained organized and presentable.</div>
+            </div>
+        </div>
+
+        <div class="grid-container" style="background-color: #61b100;">
+            <div class="schooldates" style="background-color: #61b100;">November 2021<br>April 2022</div>
+            <div class="schoolinfo" style="background-color: #61b100;"><ion-icon name="business-outline"></ion-icon>&ensp;Fortinos</div>
+            <div class="schoolinfo2" style="background-color: #61b100;"><ion-icon name="person-circle-outline"></ion-icon>&ensp;Cashier</div>
+            <div class="schoolinfo3" style="background-color: #61b100;">
+                I was responsible for processing customer transactions at the point of sale, 
+                handling cash, credit, and debit card payments accurately. I provided excellent customer service, 
+                managde transactions efficiently, and ensured the sales area remained organized and presentable.
+            </div>
+            </div>
+        </div>
+    </section>
 </div>
 
-<footer>
-  <h2>Contact me</h2>
-  <a href="https://www.instagram.com/neel.oza758/?hl=en" target="_blank" class="contactimg"><img src="Instagram.png" width="50" height="50" onclick="audio.play();"></a>
-  <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="contactimg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1200px-Gmail_icon_%282020%29.svg.png" width="65" height="50" onclick="audio.play();"></a>
-</footer>
+    <script>
+        // Close the dropdown menu if the user clicks outside of it
+        function myfunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
-<!--Javascript for button audio-->
-<script type="text/javascript">
-  const audio = new Audio();
-  audio.src = "https://www.fesliyanstudios.com/play-mp3/387";
-</script>
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.read-more-btn')) {
+                var dropdowns = document.getElementsByClassName("long-description");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
 
-<script>
-  //Get the button
-  var mybutton = document.getElementById("myBtn");
-   
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function() {scrollFunction()};
-    
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-   }
-    
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.documentElement.scrollTop = 0;
-  }
-</script>
+        function responsivefunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function moveElementsDown() {
+            document.querySelector('.content').classList.toggle('moved-down');
+        }
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
