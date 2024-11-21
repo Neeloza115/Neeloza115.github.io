@@ -390,12 +390,12 @@ h1 {
         gap: 80px;
     }
 
-    .project-card h2, .project-card2 h2 {
+    .project-card h2, .project-card2 h2, .project_card3 h2{
         font-size: 1.959vw;
         margin-bottom: 10px;
     }
     
-    .project-card p, .project-card2 p {
+    .project-card p, .project-card2 p, .project-card3 p {
         font-size: 1.306vw;
         margin-bottom: 20px;
     }
@@ -557,8 +557,8 @@ h1 {
                     <p class="short-description">A web development project.</p>
                     <a href="https://lnkd.in/gmHXrtnX" target="_blank"><img src="Home_Garden.png"/></a>
                     <button class="read-more-btn" onclick="myfunction2()">Read More</button>
-                    <div class="long-description" id="myDropdown2">
-                        <p>It involves creating a Parkinson’s disease detection game in Elm with where players must drag and drop flowers into a pot based on the outline given.
+                    <div class="long-description" id="myDropdown3">
+                        <p>It involves creating a Parkinson’s disease detection game in Elm where players must drag and drop flowers into a pot based on the outline given.
                              The game uses dynamic difficulty adjustments based on the player's score and how quickly they are able to complete the task.</p>
                     </div>
                 </div>
@@ -600,6 +600,10 @@ h1 {
 
         function myfunction2() {
             document.getElementById("myDropdown2").classList.toggle("show");
+        }
+
+        function myfunction3() {
+            document.getElementById("myDropdown3").classList.toggle("show");
         }
 
         // Close the dropdown if the user clicks outside of it
